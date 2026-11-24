@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ideas | OpenTechLab</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      background: #080d18;
+      color: #f1f5f9;
+      font-family: Arial, sans-serif;
+    }
+    main { max-width: 750px; margin: auto; }
+    a { color: #60a5fa; text-decoration: none; }
+    h1 { font-size: 38px; margin-bottom: 10px; }
+    p { color: #aab6c8; line-height: 1.6; }
+    form {
+      margin-top: 30px;
+      padding: 25px;
+      background: #111c2e;
+      border: 1px solid #26364e;
+      border-radius: 14px;
+    }
+    label { display: block; margin: 18px 0 8px; }
+    input, textarea {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #34445c;
+      border-radius: 8px;
+      background: #080d18;
+      color: white;
+      font-size: 15px;
+    }
+    textarea { min-height: 130px; resize: vertical; }
+    button {
+      margin-top: 20px;
+      padding: 13px 20px;
+      border: 0;
+      border-radius: 8px;
+      background: #2563eb;
+      color: white;
+      font-size: 15px;
+      cursor: pointer;
+    }
+    .notice {
+      margin-top: 20px;
+      padding: 14px;
+      border-radius: 8px;
+      background: #172b43;
+      color: #bfdbfe;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <a href="index.html">← Back to Community</a>
+    <h1>Share an Idea 💡</h1>
+    <p>
+      Have an idea that could improve technology, education,
+      artificial intelligence, or OpenTechLab? Share it with us.
+    </p>
+
+    <form id="ideaForm">
+      <label for="name">Your name</label>
+      <input id="name" type="text" placeholder="Enter your name" required>
+
+      <label for="email">Your email</label>
+      <input id="email" type="email" placeholder="Enter your email">
+
+      <label for="title">Idea title</label>
+      <input id="title" type="text" placeholder="Give your idea a name" required>
+
+      <label for="description">Describe your idea</label>
+      <textarea id="description" placeholder="Explain your idea..." required></textarea>
+
+      <button type="submit">Prepare idea submission</button>
+    </form>
+
+    <div class="notice">
+      This is a prototype. It does not send or save submissions.
+      The form prepares an email draft so you can submit your idea manually.
+    </div>
+  </main>
+
+  <script>
+    document.getElementById("ideaForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const title = document.getElementById("title").value;
+      const description = document.getElementById("description").value;
+
+      const subject = encodeURIComponent("OpenTechLab Idea: " + title);
+      const body = encodeURIComponent(
+        "Name: " + name +
+        "\nEmail: " + email +
+        "\n\nIdea: " + title +
+        "\n\nDescription:\n" + description
+      );
+
+      window.location.href =
+        "mailto:?subject=" + subject + "&body=" + body;
+    });
+  </script>
+</body>
+</html>
