@@ -104,6 +104,213 @@ button {
     flex-direction: column;
   }
 }
+  
+/* =================================
+   OPENTECHLAB - AI PREMIUM DESIGN
+================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  color: #f8fafc;
+  font-family: Inter, Arial, sans-serif;
+  background:
+    radial-gradient(ellipse at 10% 10%, rgba(37, 99, 235, .22), transparent 40%),
+    radial-gradient(ellipse at 90% 25%, rgba(124, 58, 237, .20), transparent 40%),
+    radial-gradient(ellipse at 50% 100%, rgba(6, 182, 212, .12), transparent 45%),
+    linear-gradient(135deg, #050816, #0b1120 55%, #080b18);
+  background-attachment: fixed;
+}
+
+/* Ambient light */
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  filter: blur(120px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+body::before {
+  top: 5%;
+  left: -180px;
+  background: rgba(37, 99, 235, .15);
+}
+
+body::after {
+  right: -180px;
+  bottom: 0;
+  background: rgba(124, 58, 237, .15);
+}
+
+/* Header */
+
+header {
+  background: rgba(8, 13, 29, .65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, .10);
+}
+
+/* Main containers */
+
+.container,
+main,
+.chat-container,
+.chat-box {
+  color: #f8fafc;
+}
+
+/* Glass panels */
+
+.card,
+.panel,
+.chat-container,
+.chat-box,
+.sidebar,
+section {
+  background: rgba(255, 255, 255, .045);
+  border: 1px solid rgba(255, 255, 255, .10);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, .18);
+}
+
+/* Typography */
+
+h1, h2, h3, h4 {
+  color: #ffffff;
+  letter-spacing: -.7px;
+}
+
+p {
+  color: #aab8d0;
+  line-height: 1.7;
+}
+
+/* Inputs */
+
+input,
+textarea {
+  background: rgba(5, 10, 25, .75) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(148, 163, 184, .22) !important;
+  border-radius: 12px !important;
+  padding: 14px !important;
+  outline: none;
+  transition: .3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #6366f1 !important;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, .15);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #718096;
+}
+
+/* Buttons */
+
+button {
+  background: linear-gradient(135deg, #2563eb, #7c3aed) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, .16) !important;
+  border-radius: 11px !important;
+  padding: 12px 22px !important;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .3s ease;
+  box-shadow: 0 5px 22px rgba(37, 99, 235, .22);
+}
+
+button:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.15);
+  box-shadow: 0 8px 28px rgba(124, 58, 237, .35);
+}
+
+/* Links */
+
+a {
+  color: #93c5fd;
+  text-decoration: none;
+  transition: .25s ease;
+}
+
+a:hover {
+  color: #c4b5fd;
+}
+
+/* Chat messages */
+
+.message,
+.chat-message {
+  background: rgba(255, 255, 255, .055);
+  border: 1px solid rgba(255, 255, 255, .09);
+  border-radius: 14px;
+  padding: 14px;
+  margin-bottom: 12px;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080d18;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#2563eb, #7c3aed);
+  border-radius: 10px;
+}
+
+/* Animations */
+
+@keyframes aiFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+main {
+  animation: aiFadeUp .7s ease both;
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 </style>
 </head>
 
