@@ -9,12 +9,20 @@
 <style>
 * { box-sizing: border-box; }
 
+
 body {
   margin: 0;
-  background: #080d18;
-  color: white;
   font-family: Arial, sans-serif;
+  color: #f8fafc;
+  background:
+    radial-gradient(ellipse at 15% 15%, rgba(37, 99, 235, 0.22), transparent 40%),
+    radial-gradient(ellipse at 85% 30%, rgba(124, 58, 237, 0.20), transparent 40%),
+    radial-gradient(ellipse at 50% 100%, rgba(6, 182, 212, 0.12), transparent 45%),
+    linear-gradient(135deg, #050816 0%, #0b1120 50%, #080b18 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
 }
+
 
 header {
   padding: 25px 8%;
