@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Laboratory | OpenTechLab</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #080d18;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  padding: 22px 8%;
+  border-bottom: 1px solid #263750;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header a {
+  color: #60a5fa;
+  text-decoration: none;
+}
+
+main {
+  max-width: 850px;
+  margin: 65px auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 42px;
+}
+
+.subtitle {
+  color: #aab5c8;
+  line-height: 1.6;
+}
+
+.chat {
+  margin-top: 35px;
+  padding: 25px;
+  background: #111c2e;
+  border: 1px solid #263750;
+  border-radius: 15px;
+}
+
+#messages {
+  min-height: 180px;
+  max-height: 350px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.message {
+  padding: 13px;
+  margin: 10px 0;
+  background: #1c2b43;
+  border-radius: 9px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.input-area {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  flex: 1;
+  min-width: 0;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #344761;
+  background: #080d18;
+  color: white;
+}
+
+button {
+  padding: 14px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.notice {
+  color: #93a4bd;
+  font-size: 13px;
+  margin-top: 20px;
+}
+
+@media(max-width: 550px) {
+  .input-area {
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <strong>OpenTechLab</strong>
+  <a href="../index.html">← Voltar ao início</a>
+</header>
+
+<main>
+
+<h1>AI Laboratory</h1>
+
+<p class="subtitle">
+  Explore o universo da inteligência artificial.
+  Faça perguntas, experimente ideias e descubra novas possibilidades.
+</p>
+
+<div class="chat">
+
+  <h2>AI Assistant</h2>
+
+  <div id="messages">
+    <div class="message">
+      <strong>OpenTechLab:</strong><br>
+      Bem-vindo ao AI Laboratory! Esta é a interface experimental do nosso assistente.
+    </div>
+  </div>
+
+  <div class="input-area">
+    <input
+      type="text"
+      id="question"
+      placeholder="Digite sua mensagem..."
+    >
+
+    <button onclick="sendMessage()">Enviar</button>
+  </div>
+
+  <p class="notice">
+    Protótipo experimental. Ainda não conectado a um serviço de inteligência artificial.
+  </p>
+
+</div>
+
+</main>
+
+<script>
+function sendMessage() {
+  const input = document.getElementById("question");
+  const messages = document.getElementById("messages");
+
+  const question = input.value.trim();
+
+  if (!question) return;
+
+  const message = document.createElement("div");
+  message.className = "message";
+  message.textContent = "Você: " + question;
+
+  messages.appendChild(message);
+
+  const response = document.createElement("div");
+  response.className = "message";
+  response.textContent =
+    "OpenTechLab: Sua mensagem foi recebida! A conexão com uma IA real será implementada em uma próxima atualização.";
+
+  messages.appendChild(response);
+
+  input.value = "";
+  messages.scrollTop = messages.scrollHeight;
+}
+
+document.getElementById("question").addEventListener("keydown", function(event) {
+  if (event.key === "Enter") sendMessage();
+});
+</script>
+
+</body>
+</html>
