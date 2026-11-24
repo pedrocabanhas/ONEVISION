@@ -135,6 +135,107 @@ footer {
   box-shadow: 0 12px 40px rgba(37, 99, 235, 0.16);
 }
 
+/* OpenTechLab - Gradient Buttons */
+
+button,
+.btn,
+a.button {
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 10px;
+  padding: 12px 22px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.22);
+}
+
+button:hover,
+.btn:hover,
+a.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(124, 58, 237, 0.35);
+  filter: brightness(1.15);
+}
+
+/* Premium Glass Header */
+
+header {
+  background: rgba(8, 13, 29, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Typography */
+
+h1, h2, h3 {
+  letter-spacing: -0.8px;
+  color: #ffffff;
+}
+
+p {
+  line-height: 1.7;
+  color: #aab8d0;
+}
+
+/* Smooth scrolling */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ambient Glow */
+
+body::before {
+  content: "";
+  position: fixed;
+  width: 450px;
+  height: 450px;
+  top: 10%;
+  left: -180px;
+  background: rgba(37, 99, 235, 0.12);
+  filter: blur(120px);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  width: 450px;
+  height: 450px;
+  bottom: 0;
+  right: -180px;
+  background: rgba(124, 58, 237, 0.13);
+  filter: blur(120px);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Entrance Animation */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card,
+.feature-card,
+.lab-card {
+  animation: fadeUp 0.7s ease both;
+}
+
 </style>
 </head>
 
