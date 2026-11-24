@@ -2,63 +2,170 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OpenTechLab | Tecnologia para todos</title>
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      background: #090d14;
-      color: #f1f5f9;
-      font-family: Arial, sans-serif;
-    }
-    header {
-      padding: 25px 8%;
-      border-bottom: 1px solid #263344;
-      color: #65e6a5;
-      font-weight: bold;
-      font-size: 22px;
-    }
-    main {
-      max-width: 950px;
-      margin: 110px auto;
-      padding: 25px;
-    }
-    .tag { color: #65e6a5; letter-spacing: 3px; }
-    h1 { font-size: clamp(42px, 8vw, 76px); }
-    h1 span { color: #65e6a5; }
-    p { color: #aab7c8; line-height: 1.8; font-size: 18px; }
-    a {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 15px 24px;
-      background: #65e6a5;
-      color: #07120d;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    footer {
-      padding: 30px;
-      text-align: center;
-      color: #778397;
-      border-top: 1px solid #263344;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OpenTechLab | Technology for Everyone</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #080d18;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  padding: 25px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #263750;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: bold;
+  color: #60a5fa;
+}
+
+nav a {
+  color: #dbeafe;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.hero {
+  padding: 110px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(40px, 7vw, 75px);
+  margin-bottom: 15px;
+}
+
+.hero h1 span {
+  color: #60a5fa;
+}
+
+.hero p {
+  color: #aab5c8;
+  font-size: 18px;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 15px 25px;
+  background: #2563eb;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+section {
+  padding: 60px 8%;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  padding: 28px;
+  background: #111c2e;
+  border: 1px solid #263750;
+  border-radius: 12px;
+}
+
+.card p {
+  color: #aab5c8;
+  line-height: 1.6;
+}
+
+.card a {
+  color: #60a5fa;
+  text-decoration: none;
+}
+
+footer {
+  padding: 30px;
+  text-align: center;
+  color: #8292aa;
+  border-top: 1px solid #263750;
+}
+</style>
 </head>
+
 <body>
-  <header>OpenTechLab.</header>
-  <main>
-    <div class="tag">OPEN KNOWLEDGE · OPEN SOURCE</div>
-    <h1>Technology for <span>everyone.</span></h1>
-    <p>
-      A collaborative initiative to make technology more accessible
-      through open knowledge, practical tools, artificial intelligence
-      and innovation.
-    </p>
-    <a href="https://github.com/">Explore Open Source</a>
-  </main>
-  <footer>© 2026 OpenTechLab — Building a better technological future.</footer>
+
+<header>
+  <div class="logo">OpenTechLab</div>
+  <nav>
+    <a href="#about">Sobre</a>
+    <a href="#labs">Laboratórios</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <h1>Technology for <span>everyone.</span></h1>
+  <p>Explore. Learn. Create. Innovate.</p>
+  <p>Um espaço aberto para desenvolver o futuro da tecnologia.</p>
+  <a class="button" href="#labs">Explorar plataforma</a>
+</div>
+
+<section id="about">
+  <h2>Sobre o OpenTechLab</h2>
+  <p style="text-align:center;color:#aab5c8;max-width:700px;margin:auto;line-height:1.8">
+    O OpenTechLab é um projeto dedicado à democratização da tecnologia,
+    oferecendo ferramentas, conhecimento e experiências para todos.
+  </p>
+</section>
+
+<section id="labs">
+  <h2>Explore nossos laboratórios</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>AI Laboratory</h3>
+      <p>Explore inteligência artificial e novas experiências tecnológicas.</p>
+      <a href="#">Em desenvolvimento →</a>
+    </div>
+
+    <div class="card">
+      <h3>Code Playground</h3>
+      <p>Escreva, execute e experimente HTML, CSS e JavaScript.</p>
+      <a href="tools/playground.html">Acessar ferramenta →</a>
+    </div>
+
+    <div class="card">
+      <h3>Learning Center</h3>
+      <p>Aprenda programação e descubra novas tecnologias.</p>
+      <a href="#">Em desenvolvimento →</a>
+    </div>
+
+    <div class="card">
+      <h3>Innovation Lab</h3>
+      <p>Conheça ideias, experimentos e projetos inovadores.</p>
+      <a href="#">Em desenvolvimento →</a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  OpenTechLab © 2026 — Technology for everyone.
+</footer>
+
 </body>
 </html>
