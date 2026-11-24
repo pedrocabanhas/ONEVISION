@@ -96,6 +96,127 @@ iframe {
     grid-template-columns: 1fr;
   }
 }
+  
+/* =================================
+   OPENTECHLAB - CODE PLAYGROUND UI
+================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  color: #f8fafc;
+  font-family: Inter, Arial, sans-serif;
+  background:
+    radial-gradient(ellipse at 10% 10%, rgba(37, 99, 235, .20), transparent 40%),
+    radial-gradient(ellipse at 90% 25%, rgba(124, 58, 237, .18), transparent 40%),
+    linear-gradient(135deg, #050816, #0b1120 55%, #080b18);
+  background-attachment: fixed;
+}
+
+header {
+  background: rgba(8, 13, 29, .75);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, .10);
+}
+
+h1, h2, h3 {
+  color: #fff;
+  letter-spacing: -.7px;
+}
+
+p, label {
+  color: #aab8d0;
+}
+
+/* Editor panels */
+
+.editor,
+.editor-container,
+.panel,
+.output,
+.preview-container {
+  background: rgba(15, 23, 42, .72);
+  border: 1px solid rgba(255, 255, 255, .12);
+  border-radius: 16px;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, .22);
+  overflow: hidden;
+}
+
+/* Code areas */
+
+textarea,
+pre,
+code {
+  background: rgba(3, 7, 18, .85);
+  color: #dbeafe;
+  border: 1px solid rgba(148, 163, 184, .18);
+  border-radius: 10px;
+  font-family: Consolas, monospace;
+  line-height: 1.6;
+}
+
+textarea {
+  width: 100%;
+  padding: 14px;
+  resize: vertical;
+}
+
+/* Buttons */
+
+button {
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, .16);
+  border-radius: 10px;
+  padding: 12px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(124, 58, 237, .35);
+  filter: brightness(1.15);
+}
+
+/* Preview */
+
+iframe {
+  width: 100%;
+  min-height: 300px;
+  background: white;
+  border: 1px solid rgba(255, 255, 255, .15);
+  border-radius: 12px;
+}
+
+/* Links */
+
+a {
+  color: #93c5fd;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #c4b5fd;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#2563eb, #7c3aed);
+  border-radius: 10px;
+}
+
 </style>
 </head>
 
